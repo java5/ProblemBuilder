@@ -1,0 +1,29 @@
+    private Node createSvgMathNode(String text) {
+      Node svgNode = null;
+      JMathComponent mathComponent = new JMathComponent();
+      mathComponent.setBackground(Color.white);
+      mathComponent.setFont(new Font("miscfixed", 0, 16));
+      mathComponent.setContent(text);
+      try {
+        MutableLayoutContext context = new LayoutContextImpl(LayoutContextImpl.getDefaultLayoutContext());
+        context.setParameter(Parameter.ANTIALIAS, "true");
+        // Workaround a XEP problem. FOP 1 is OK.
+        context.setParameter(Parameter.MATHBACKGROUND, "#FFFFFF");
+        context.setParameter(Parameter.MATHSIZE, "18");
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+
+        Converter.getInstance().convert(mathComponent.getDocument(), baos, Converter.TYPE_SVG, context);
+        baos.flush();
+        baos.close();
+        String result = baos.toString("UTF-8");
+        svgNode = doc.createElement("svg");
+        CDATASection nameTextNode = doc.createCDATASection(result);
+        svgNode.appendChild(nameTextNode);
+      } catch (IOException ex) {
+        Logger LOG = Logger.getLogger(InnerMathOnlyCardPaneHandler.class);
+        LOG.error("MathOnlyCardPaneHandler " + ex.getMessage());
+      }
+      return svgNode;
+    }
+//    Node svgMathNode = createSvgMathNode(text);
+//    formulaNode.appendChild(svgMathNode);

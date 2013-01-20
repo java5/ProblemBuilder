@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-flat-20030114.dtd">
+<card id="1" xmlns="http://java5.ru/problem-1.0" xmlns:x="http://www.w3.org/1999/xhtml">
+  <content>
+    <info>
+      <x:p>
+        Миролюбов, Енгалычев, Сергиевский, Алмаметов, Курицын, Смирнов-Васильев, Яшина
+        <x:br/>
+        Пособие по решению задач по сопротивлению материалов. издание 2-е(1967).
+        <x:br/>
+        Страница 177.
+      </x:p>
+    </info>
+    <task>
+      <paragraph id="1">
+        Построить 
+        <x:b>эпюры нормальных сил, напряжений и перемещений сечений</x:b> для ступенчатого стержня, приведенного на рис. 1.5. Модуль упругости положить постоянным.
+        Добавляю для примера 
+        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" 
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                      xsi:schemaLocation="http://www.w3.org/1998/Math/MathML	http://www.altova.com/schemas/Math/mathml2.xsd">
+          <mml:mrow>
+            <mml:msup>
+              <mml:mfenced>
+                <mml:mrow>
+                  <mml:mi>a</mml:mi>
+                  <mml:mo>+</mml:mo>
+                  <mml:mi>b</mml:mi>
+                </mml:mrow>
+              </mml:mfenced>
+              <mml:mn>2</mml:mn>
+            </mml:msup>
+          </mml:mrow>
+        </mml:math>
+        математическое выражение.
+      </paragraph>
+      <illustration height="455" id="2">
+        <subtitle>рис. 1.5</subtitle>
+        <svg:svg version="1.1" width="5cm" height="4cm" xmlns:svg="http://www.w3.org/2000/svg">
+          <svg:title>Four rectangles</svg:title>
+          <svg:rect x="0.5cm" y="0.5cm" width="2cm" height="1cm"/>
+          <svg:rect x="0.5cm" y="2cm" width="1cm" height="1.5cm"/>
+          <svg:rect x="3cm" y="0.5cm" width="1.5cm" height="2cm"/>
+          <svg:rect x="3.5cm" y="3cm" width="1cm" height="0.5cm"/>
+					<!-- Show outline of canvas using 'rect' element -->
+          <svg:rect x=".01cm" y=".01cm" width="4.98cm" height="3.98cm" fill="none" stroke="blue" stroke-width=".02cm"/>
+        </svg:svg>
+      </illustration>
+    </task>
+    <solution>
+      <paragraph id="1">
+        Решение (нумерация пунктов соответствует указанному выше алгоритму).
+        1. Разбиваем стержень на участки (см. рисунок).
+        2. Заделку в сечении 0 заменяем реакцией 	
+        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" 
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                      xsi:schemaLocation="http://www.w3.org/1998/Math/MathML	http://www.altova.com/schemas/Math/mathml2.xsd">
+          <mml:mrow>
+            <mml:msup>
+              <mml:mfenced>
+                <mml:mrow>
+                  <mml:mi>a</mml:mi>
+                  <mml:mo>+</mml:mo>
+                  <mml:mi>b</mml:mi>
+                </mml:mrow>
+              </mml:mfenced>
+              <mml:mn>2</mml:mn>
+            </mml:msup>
+          </mml:mrow>
+        </mml:math>			
+        , которую определяем из уравнения равновесия (см. формулы (П.25)):
+        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" 
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        >
+          <mml:mrow>
+            <mml:msup>
+              <mml:mfenced>
+                <mml:mrow>
+                  <mml:mi>a</mml:mi>
+                  <mml:mo>+</mml:mo>
+                  <mml:mi>b</mml:mi>
+                </mml:mrow>
+              </mml:mfenced>
+              <mml:mn>2</mml:mn>
+            </mml:msup>
+          </mml:mrow>
+        </mml:math>
+        3. Рассматривая равновесие отсеченных частей стержня на каждом участке, определяем продольное усилие (используется местная система координат см.рис. 1.6): 
+        - участок 0-1
+        <line>
+          <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" 
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                      xsi:schemaLocation="http://www.w3.org/1998/Math/MathML	http://www.altova.com/schemas/Math/mathml2.xsd">
+            <mml:mrow>
+              <mml:msup>
+                <mml:mfenced>
+                  <mml:mrow>
+                    <mml:mi>a</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mi>b</mml:mi>
+                  </mml:mrow>
+                </mml:mfenced>
+                <mml:mn>2</mml:mn>
+              </mml:msup>
+            </mml:mrow>
+          </mml:math>
+        </line>		
+        - участок 1-2
+        <line>
+          <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" 
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+            <mml:mrow>
+              <mml:msup>
+                <mml:mfenced>
+                  <mml:mrow>
+                    <mml:mi>a</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mi>b</mml:mi>
+                  </mml:mrow>
+                </mml:mfenced>
+                <mml:mn>2</mml:mn>
+              </mml:msup>
+            </mml:mrow>
+          </mml:math>
+        </line>		
+        - участок 2-3
+        <line>
+          <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" 
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <mml:mrow>
+              <mml:msup>
+                <mml:mfenced>
+                  <mml:mrow>
+                    <mml:mi>a</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mi>b</mml:mi>
+                  </mml:mrow>
+                </mml:mfenced>
+                <mml:mn>2</mml:mn>
+              </mml:msup>
+            </mml:mrow>
+          </mml:math>
+        </line>		
+        - участок 3-4
+        <line>
+          <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" 
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          >
+            <mml:mrow>
+              <mml:msup>
+                <mml:mfenced>
+                  <mml:mrow>
+                    <mml:mi>a</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mi>b</mml:mi>
+                  </mml:mrow>
+                </mml:mfenced>
+                <mml:mn>2</mml:mn>
+              </mml:msup>
+            </mml:mrow>
+          </mml:math>
+        </line>		
+        Эпюра N приведена на рис.1.5.
+      </paragraph>
+      <paragraph id="2">
+        Так как углы рамы должны оставаться прямыми, условие сравнения перемещений запишем следующим образом: 
+        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" 
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <mml:mrow>
+            <mml:msup>
+              <mml:mfenced>
+                <mml:mrow>
+                  <mml:mi>a</mml:mi>
+                  <mml:mo>+</mml:mo>
+                  <mml:mi>b</mml:mi>
+                </mml:mrow>
+              </mml:mfenced>
+              <mml:mn>2</mml:mn>
+            </mml:msup>
+          </mml:mrow>
+        </mml:math>
+        из табличных балок 4) и 5) (см. рис. 99):
+        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" 
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <mml:mrow>
+            <mml:msup>
+              <mml:mfenced>
+                <mml:mrow>
+                  <mml:mi>a</mml:mi>
+                  <mml:mo>+</mml:mo>
+                  <mml:mi>b</mml:mi>
+                </mml:mrow>
+              </mml:mfenced>
+              <mml:mn>2</mml:mn>
+            </mml:msup>
+          </mml:mrow>
+        </mml:math>
+        По условию сравнения перемещений 
+        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" 
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+          <mml:mrow>
+            <mml:msup>
+              <mml:mfenced>
+                <mml:mrow>
+                  <mml:mi>a</mml:mi>
+                  <mml:mo>+</mml:mo>
+                  <mml:mi>b</mml:mi>
+                </mml:mrow>
+              </mml:mfenced>
+              <mml:mn>2</mml:mn>
+            </mml:msup>
+          </mml:mrow>
+        </mml:math>
+        откуда
+        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" 
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        >
+          <mml:mrow>
+            <mml:msup>
+              <mml:mfenced>
+                <mml:mrow>
+                  <mml:mi>a</mml:mi>
+                  <mml:mo>+</mml:mo>
+                  <mml:mi>b</mml:mi>
+                </mml:mrow>
+              </mml:mfenced>
+              <mml:mn>2</mml:mn>
+            </mml:msup>
+          </mml:mrow>
+        </mml:math>
+      </paragraph>
+      <paragraph>
+        из этих же табличных балок расхождение середин сторон а будет:
+        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" 
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                      xsi:schemaLocation="http://www.w3.org/1998/Math/MathML	http://www.altova.com/schemas/Math/mathml2.xsd">
+          <mml:mrow>
+            <mml:msup>
+              <mml:mfenced>
+                <mml:mrow>
+                  <mml:mi>a</mml:mi>
+                  <mml:mo>+</mml:mo>
+                  <mml:mi>b</mml:mi>
+                </mml:mrow>
+              </mml:mfenced>
+              <mml:mn>2</mml:mn>
+            </mml:msup>
+          </mml:mrow>
+        </mml:math>
+      </paragraph>
+      <illustration height="323" id="3">
+        <subtitle>рис. 99</subtitle>
+        <svg:svg version="1.1" width="5cm" height="4cm" xmlns:svg="http://www.w3.org/2000/svg">
+          <svg:title>Four rectangles</svg:title>
+          <svg:rect x="0.5cm" y="0.5cm" width="2cm" height="1cm"/>
+          <svg:rect x="0.5cm" y="2cm" width="1cm" height="1.5cm"/>
+          <svg:rect x="3cm" y="0.5cm" width="1.5cm" height="2cm"/>
+          <svg:rect x="3.5cm" y="3cm" width="1cm" height="0.5cm"/>
+          <svg:rect x=".01cm" y=".01cm" width="4.98cm" height="3.98cm" fill="none" stroke="blue" stroke-width=".02cm"/>
+        </svg:svg>
+      </illustration>
+    </solution>
+  </content>
+  <layout>
+    <task-layout>
+      <row>
+        <colum>1</colum>
+      </row>
+      <row>
+        <colum>2</colum>
+      </row>
+    </task-layout>
+    <solution-layout>
+      <row>
+        <colum>1</colum>
+      </row>
+      <row>
+        <colum>2</colum>
+      </row>
+      <row>
+        <colum>3</colum>
+      </row>
+    </solution-layout>
+  </layout>
+</card>

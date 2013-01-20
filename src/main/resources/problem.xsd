@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:target="http://www.java5.ru/problem" targetNamespace="http://www.java5.ru/problem" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:complexType name="FormulaType">
+    <xs:sequence>
+      <xs:element name="math" type="xs:string"/>
+      <xs:element ref="target:png"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="formula" type="target:FormulaType"/>
+  <xs:element name="png" type="xs:string"/>
+  <xs:complexType name="InfoType">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string"/>
+      <xs:element name="path" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="img">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="target:png"/>
+        <xs:element name="caption" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ContentType">
+    <xs:sequence maxOccurs="unbounded">
+      <xs:element name="p" type="target:ParaType" minOccurs="0" />
+      <xs:element ref="target:img" minOccurs="0" />
+      <xs:element ref="target:formula" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ParaType" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="target:formula"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="RootType">
+    <xs:sequence>
+      <xs:element name="info" type="target:InfoType"/>
+      <xs:element name="task" type="target:ContentType"/>
+      <xs:element name="solution" type="target:ContentType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="root" type="target:RootType"/>
+</xs:schema>

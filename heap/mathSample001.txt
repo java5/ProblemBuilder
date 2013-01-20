@@ -1,0 +1,19 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><msubsup><mo>&#8747;</mo><mi>a</mi><mi>x</mi></msubsup></mrow><mi>f</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mi>d</mi><mi>t</mi><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mstyle></math>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="true">
+<mfrac>
+<mrow>
+<msup><mi>a</mi><mn>2</mn></msup>
+<mo>+</mo>
+<mi>a</mi>
+<mi>b</mi>
+<mo>+</mo>
+<msup><mi>b</mi><mn>2</mn></msup>
+</mrow>
+<mrow>
+<mi>a</mi>
+<mo>+</mo>
+<mi>b</mi>
+</mrow>
+</mfrac>
+</mstyle></math>

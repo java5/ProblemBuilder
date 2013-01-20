@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<card id="1" xmlns="http://java5.ru/problem-1.0">
+  <content>
+    <info>
+      Миролюбов, Енгалычев, Сергиевский, Алмаметов, Курицын, Смирнов-Васильев, Яшина
+      Пособие по решению задач по сопротивлению материалов. издание 2-е(1967).
+      Страница 177.
+    </info>
+    <task>
+      <paragraph id="1">
+        Построить эпюры нормальных сил, напряжений и перемещений сечений для ступенчатого стержня, приведенного на рис. 1.5. Модуль 		упругости положить постоянным.
+      </paragraph>
+      <illustration height="455" id="2">
+        <subtitle>рис. 1.5</subtitle>
+      </illustration>
+    </task>
+    <solution>
+      <paragraph id="1">
+        Решение (нумерация пунктов соответствует указанному выше алгоритму).
+        1. Разбиваем стержень на участки (см. рисунок).
+        2. Заделку в сечении 0 заменяем реакцией 	
+        <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                      xsi:schemaLocation="http://www.w3.org/1998/Math/MathML http://www.altova.com/schemas/Math/mathml2.xsd">
+          <mml:mrow>
+            <mml:msup>
+              <mml:mfenced>
+                <mml:mrow>
+                  <mml:mi>a</mml:mi>
+                  <mml:mo>+</mml:mo>
+                  <mml:mi>b</mml:mi>
+                </mml:mrow>
+              </mml:mfenced>
+              <mml:mn>2</mml:mn>
+            </mml:msup>
+          </mml:mrow>
+        </mml:math>			
+        , которую определяем из уравнения равновесия (см. формулы (П.25)):
+      </paragraph>
+    </solution>
+  </content>
+</card>
